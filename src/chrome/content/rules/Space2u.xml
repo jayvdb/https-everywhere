@@ -23,10 +23,7 @@
 		<exclusion pattern="^http://(?:www\.)?space2u\.com/(?!accadm/base/auth\.php|files/login\.php|images/)" />
 
 
-	<securecookie host="^(?:owa|webmail2)\.space2u\.com$" name=".+" />
-
-
-	<rule from="^http://(owa\.|webmail2\.|www\.)?space2u\.com/"
-		to="https://$1space2u.com/" />
+	<rule from="^http://"
+		to="https://" />
 
 </ruleset>

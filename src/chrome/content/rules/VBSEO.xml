@@ -13,6 +13,7 @@
 <ruleset name="vBSEO (partial)">
 
 	<target host="vbseo.com" />
+	<target host="cdn.vbseo.com" />
 	<target host="www.vbseo.com" />
 		<exclusion pattern="^http://(?:www\.)?vbseo\.com/(?!clientscript/|(?:cron|css|image)\.php|images/|(?:imag|styl)es_homepage/|register(?:$|\?|/))" />
 

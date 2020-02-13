@@ -23,6 +23,7 @@
 <ruleset name="Trusted Reviews (partial)">
 
 	<target host="trustedreviews.com" />
+	<target host="secure.trustedreviews.com" />
 	<target host="static.trustedreviews.com" />
 	<target host="www.trustedreviews.com" />
 		<exclusion pattern="^http://(?:www\.)?trustedreviews\.com/(?!css/)" />
