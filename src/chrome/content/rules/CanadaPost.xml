@@ -1,6 +1,25 @@
-<ruleset name="Canada Post">
-  <target host="canadapost.ca" />
-  <target host="*.canadapost.ca" />
+<!--
+	Problematic subdomains:
 
-  <rule from="^http://([^/:@\.]+)\.canadapost\.ca/" to="https://$1.canadapost.ca/"/>
+		www1 - timeout on http and https
+		www2 - timeout on http and https
+		test - timeout on http and https
+		portal - timeout on http and https
+		m - bad cert domain
+-->
+<ruleset name="Canada Post">
+	<target host="canadapost.ca" />
+	<target host="*.canadapost.ca" />
+
+	<test url="http://www.canadapost.ca/" />
+	<test url="http://m.canadapost.ca/" />
+	<test url="http://beta.canadapost.ca/" />
+	<test url="http://forums.canadapost.ca/" />
+	<test url="http://status.canadapost.ca/" />
+	<test url="http://elearning.canadapost.ca/" />
+	<test url="http://payment.canadapost.ca/" />
+
+	<rule from="^http://m.canadapost.ca/" to="https://www.canadapost.ca/" />
+
+	<rule from="^http:" to="https:"/>
 </ruleset>
