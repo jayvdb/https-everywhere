@@ -57,7 +57,7 @@ Fetch error: http://wiki.ro.vutbr.cz/ => https://wiki.ro.vutbr.cz/: (60, 'SSL ce
 		- student.hosting.ro	Shows default page
 		- www.student	Shows default page
 		- www.vutium	500
-
+		- ent.ro	Timeout
 
 	Problematic hosts in *vutbr.cz:
 
@@ -78,8 +78,10 @@ Fetch error: http://wiki.ro.vutbr.cz/ => https://wiki.ro.vutbr.cz/: (60, 'SSL ce
 		- www.lli	Expired
 		- net		Mismatched
 		- primo		Mismatched
+		- www.isc	Mismatched
 		- sport		Expired, mismatched
-
+		- www.kam	Too many redirects
+		- www.skm	Too many redirects
 
 	These altnames don't exist:
 
@@ -150,7 +152,7 @@ Fetch error: http://wiki.ro.vutbr.cz/ => https://wiki.ro.vutbr.cz/: (60, 'SSL ce
 		- Bug on www.feec from c1.navrcholu.cz	Unsecurable <= refused
 
 -->
-<ruleset name="VUTBr.cz (partial)" default_off="failed ruleset test">
+<ruleset name="VUTBr.cz (partial)">
 
 	<!--	Direct rewrites:
 				-->
@@ -161,16 +163,13 @@ Fetch error: http://wiki.ro.vutbr.cz/ => https://wiki.ro.vutbr.cz/: (60, 'SSL ce
 	<target host="www.abuse.vutbr.cz" />
 	<target host="adfs.vutbr.cz" />
 	<target host="apollo.vutbr.cz" />
-	<target host="bank.vutbr.cz" />
 	<!--target host="best.vutbr.cz" /-->
 	<target host="certs.vutbr.cz" />
 	<target host="www.certs.vutbr.cz" />
 	<target host="zapis.cesa.vutbr.cz" />
 
 	<target host="cis.vutbr.cz" />
-	<target host="jaguar.cis.vutbr.cz" />
 	<target host="netis.cis.vutbr.cz" />
-	<target host="wifigw.cis.vutbr.cz" />
 	<target host="www.cis.vutbr.cz" />
 
 	<target host="csirt.vutbr.cz" />
@@ -210,25 +209,24 @@ Fetch error: http://wiki.ro.vutbr.cz/ => https://wiki.ro.vutbr.cz/: (60, 'SSL ce
 	<!--target host="www.feec.vutbr.cz" /-->
 
 	<target host="ffa.vutbr.cz" />
-	<target host="server.ffa.vutbr.cz" />
 	<target host="animal.ffa.vutbr.cz" />
 	<target host="www.ffa.vutbr.cz" />
 
 	<!--target host="wis.fit.vutbr.cz" /-->
 	<!--target host="www.fit.vutbr.cz" /-->
 
-	<target host="fsinfo.fme.vutbr.cz" />
+	<!--target host="fsinfo.fme.vutbr.cz" /-->
 	<!--target host="knihovna.fme.vutbr.cz" /-->
 	<!--target host="www.tst.fme.vutbr.cz" /-->
 	<target host="www.fme.vutbr.cz" />
 
 	<target host="io-gw.vutbr.cz" />
-	<target host="io-test-gw.vutbr.cz" />
 	<target host="is.vutbr.cz" />
 	<target host="www.is.vutbr.cz" />
+	<target host="isc.vutbr.cz" />
 	<target host="www.isc.vutbr.cz" />
 	<target host="isic.vutbr.cz" />
-	<target host="www.kam.vutbr.cz" />
+	<!--target host="www.kam.vutbr.cz" /-->
 	<target host="kcentrum.vutbr.cz" />
 
 	<!--target host="best.kn.vutbr.cz" /-->
@@ -242,7 +240,6 @@ Fetch error: http://wiki.ro.vutbr.cz/ => https://wiki.ro.vutbr.cz/: (60, 'SSL ce
 
 	<target host="lib.vutbr.cz" />
 	<!--target host="aleph.lib.vutbr.cz" /-->
-	<target host="serval.lib.vutbr.cz" />
 	<target host="www.lib.vutbr.cz" />
 
 	<!--target host="lists.vutbr.cz" /-->
@@ -266,7 +263,6 @@ Fetch error: http://wiki.ro.vutbr.cz/ => https://wiki.ro.vutbr.cz/: (60, 'SSL ce
 
 	<target host="apollo.ro.vutbr.cz" />
 	<target host="dog.ro.vutbr.cz" />
-	<target host="ent.ro.vutbr.cz" />
 	<target host="ffa.ro.vutbr.cz" />
 	<target host="www.ffa.ro.vutbr.cz" />
 	<target host="logovut.ro.vutbr.cz" />
@@ -274,18 +270,14 @@ Fetch error: http://wiki.ro.vutbr.cz/ => https://wiki.ro.vutbr.cz/: (60, 'SSL ce
 	<target host="navut.ro.vutbr.cz" />
 	<target host="ostratest.ro.vutbr.cz" />
 	<target host="sapgw.ro.vutbr.cz" />
-	<target host="www.skm.vutbr.cz" />
-	<target host="sw.ro.vutbr.cz" />
-	<target host="updates-yum.ro.vutbr.cz" />
+	<!--target host="www.skm.vutbr.cz" /-->
 	<target host="vh1.ro.vutbr.cz" />
 	<target host="www.vh1.ro.vutbr.cz" />
 	<target host="vh2.ro.vutbr.cz" />
 	<target host="www.vh2.ro.vutbr.cz" />
 	<target host="vh3.ro.vutbr.cz" />
 	<target host="www.vh3.ro.vutbr.cz" />
-	<target host="wiki.ro.vutbr.cz" />
 	<target host="wiki-vav.ro.vutbr.cz" />
-	<target host="wikitest.ro.vutbr.cz" />
 
 	<!--target host="sport.vutbr.cz" /-->
 	<target host="stipendia.vutbr.cz" />
@@ -342,6 +334,8 @@ Fetch error: http://wiki.ro.vutbr.cz/ => https://wiki.ro.vutbr.cz/: (60, 'SSL ce
 
 	<securecookie host=".+\.vutbr\.cz$" name=".+" />
 
+	<rule from="^http://(?:www\.)?isc\.vutbr\.cz/"
+		to="https://esnczu.cz/" />
 
 	<rule from="^http://net\.vutbr\.cz/"
 		to="https://www.net.vutbr.cz/" />

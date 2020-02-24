@@ -1,8 +1,4 @@
-
 <!--
-Disabled by https-everywhere-checker because:
-Fetch error: http://login.ezproxy1.library.sydney.edu.au/ => https://login.ezproxy1.library.sydney.edu.au/: (6, 'Could not resolve host: login.ezproxy1.library.sydney.edu.au')
-Fetch error: http://www.sydney.edu.au/ => https://www.sydney.edu.au/: Too many redirects while fetching 'https://www.sydney.edu.au/'
 
 	The University of Sydney
 
@@ -15,9 +11,11 @@ Fetch error: http://www.sydney.edu.au/ => https://www.sydney.edu.au/: Too many r
 
 		- inspired ʳ
 		- manage.profiles ʳ
+		- cas.myuni *
 
 	ᵈ Dropped
 	ʳ Refused
+	* Timeout
 
 
 	These altnames don't exist:
@@ -54,7 +52,7 @@ Fetch error: http://www.sydney.edu.au/ => https://www.sydney.edu.au/: Too many r
 	ˢ Secured by us
 
 -->
-<ruleset name="Sydney.edu.au (partial)" default_off="failed ruleset test">
+<ruleset name="Sydney.edu.au (partial)">
 
 	<target host="sydney.edu.au" />
 	<target host="staff.ask.sydney.edu.au" />
@@ -64,10 +62,9 @@ Fetch error: http://www.sydney.edu.au/ => https://www.sydney.edu.au/: Too many r
 	<target host="elearning.sydney.edu.au" />
 	<target host="intranet.sydney.edu.au" />
 	<target host="irma.sydney.edu.au" />
-	<target host="login.ezproxy1.library.sydney.edu.au" />
 	<target host="myhr.sydney.edu.au" />
 	<target host="myuni.sydney.edu.au" />
-	<target host="cas.myuni.sydney.edu.au" />
+	<!--target host="cas.myuni.sydney.edu.au" /-->
 	<target host="shb.myuni.sydney.edu.au" />
 	<target host="ppd.sydney.edu.au" />
 	<target host="rdmp.sydney.edu.au" />

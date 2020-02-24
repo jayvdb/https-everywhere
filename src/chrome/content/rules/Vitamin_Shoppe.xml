@@ -1,20 +1,10 @@
-
 <!--
-Disabled by https-everywhere-checker because:
-Fetch error: http://vitaminshoppe.com/ => https://www.vitaminshoppe.com/: Too many redirects while fetching 'https://www.vitaminshoppe.com/'
-
-	vitaminshoppe.liveclicker.com
-
-		- video
-
 
 	Problematic subdomains:
 
-		- ^ ¹
-		- video ²
+		- m *
 
-	¹ Mismatched, CN: m.vitaminshoppe.com
-	² Works; mismatched, CN: *.liveclicker.com
+	* Timeout on CI
 
 
 	Mixed content:
@@ -35,6 +25,7 @@ Fetch error: http://vitaminshoppe.com/ => https://www.vitaminshoppe.com/: Too ma
 	<target host="vitaminshoppe.com" />
 	<target host="www.vitaminshoppe.com" />
 	<target host="m.vitaminshoppe.com" />
+	<target host="video.vitaminshoppe.com" />
 
 
 	<!--	Not secured by server:
@@ -42,9 +33,7 @@ Fetch error: http://vitaminshoppe.com/ => https://www.vitaminshoppe.com/: Too ma
 	<securecookie host="^(?:m|www)?\.vitaminshoppe\.com" name=".+" />
 
 
-	<rule from="^http://(?:www\.)?vitaminshoppe\.com/"
+	<rule from="^http://(?:m\.|www\.)?vitaminshoppe\.com/"
 		to="https://www.vitaminshoppe.com/" />
 
-
-	<rule from="^http:" to="https:" />
 </ruleset>
