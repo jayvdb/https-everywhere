@@ -1,5 +1,24 @@
+<!--
+	Problematic subdomains:
+
+		www2 - timeout on http and https
+		autodiscover - timeout on http and https
+		vpn - timeout on http and https
+		video - timeout on http and https
+		analytics - conn refused on http and https
+-->
 <ruleset name="CIBC">
 	<target host="cibc.com" />
 	<target host="*.cibc.com" />
-	<rule from="^http://([^/:@\.]+)\.cibc\.com/" to="https://$1.cibc.com/"/>
+
+	<test url="http://www.cibc.com/" />
+	<test url="http://login.cibc.com/" />
+	<test url="http://lync.cibc.com/" />
+	<test url="http://lyncdiscover.cibc.com/" />
+	<test url="http://business.cibc.com/" />
+	<test url="http://pay.cibc.com/" />
+	<test url="http://payments.cibc.com/" />
+	<test url="http://us.cibc.com/" />
+
+	<rule from="^http:" to="https:"/>
 </ruleset>
